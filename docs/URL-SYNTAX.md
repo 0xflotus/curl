@@ -6,7 +6,7 @@ The official "URL syntax" is primarly defined in these two different
 specifications:
 
  - [RFC 3986](https://tools.ietf.org/html/rfc3986) (although URL is called "URI" in there)
- - [The WHATWG URL Specification]((https://url.spec.whatwg.org/)
+ - [The WHATWG URL Specification](https://url.spec.whatwg.org/)
 
 RFC 3986 is the earlier one, and curl has always tried to adhere to that one
 (since it shipped in January 2005).
