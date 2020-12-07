@@ -2,7 +2,7 @@
 
 ## Specifications
 
-The official "URL syntax" is primarly defined in these two different
+The official "URL syntax" is primarily defined in these two different
 specifications:
 
  - [RFC 3986](https://tools.ietf.org/html/rfc3986) (although URL is called "URI" in there)
@@ -37,20 +37,20 @@ libcurl offers a separate API to its URL parser for among others, this reason.
 ## "RFC3986 plus"
 
 curl recognizes a URL syntax that we call "RFC 3986 plus". It is grounded on
-the well established RFC 3986 to make sure previousy written command lines and
+the well established RFC 3986 to make sure previously written command lines and
 curl using scripts will remain working.
 
 curl's URL parser allows a few deviations from the spec in order to
-interoperate better with URLs that appear in the wild.
+inter-operate better with URLs that appear in the wild.
 
 ### spaces
 
-In particular `Location:` headers that inidicate to the client where a
+In particular `Location:` headers that indicate to the client where a
 resource has been redirected, sometimes contain spaces. This is a violation of
 RFC 3986 but is fine in the WHATWG spec. curl handles these by re-encoding
 them to `%20`.
 
-### non-ascii
+### non-ASCII
 
 Byte values in a provided URL that are outside of the printable ASCII range
 are percent-encoded by curl.
@@ -68,8 +68,8 @@ a valid URL.
 ### "scheme-less"
 
 curl supports "URLs" that do not start with a scheme. This is not supported by
-any of the specification. This is a shortcut to entering URLs that was
-supported by browsers early on and has been mimiced by curl.
+any of the specifications. This is a shortcut to entering URLs that was
+supported by browsers early on and has been mimicked by curl.
 
 Based on what the host name starts with, curl will "guess" what protocol to
 use:
@@ -86,9 +86,9 @@ use:
 
 The curl command line tool supports "globbing" of URLs. It means that you can
 create ranges and lists using `[N-M]` and `{one,two,three}` sequences. The
-letters used for this (`[]{}`) are resevered in RFC 3986 and can therefore not
+letters used for this (`[]{}`) are reserved in RFC 3986 and can therefore not
 legitimately be part of such a URL.
 
-They are however not reserved or special in the WHATWG specication, so
+They are however not reserved or special in the WHATWG specification, so
 globbing can mess up such URLs. Globbing can be turned off for such occasions
 (using `--globoff`).
